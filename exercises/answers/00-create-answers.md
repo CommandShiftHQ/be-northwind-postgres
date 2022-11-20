@@ -106,14 +106,15 @@ These exercises require you to create a table in the database, and insert record
 Create the following table in your database:
 
     ```
-    +--------------+---------------+------+--------------+---------------+
-    | Field        | Type          | Null | Key          | Extra         |
-    +--------------+---------------+------+--------------+---------------+
-    | COUNTRY_ID   | serial        | NO   | PRIMARY KEY  |               |
-    | COUNTRY_NAME | varchar(40)   | NO   |              |               |
-    | COUNTRY_CODE | varchar(2)    | NO   |              | UNIQUE        |
-    +--------------+---------------+------+--------------+---------------+
+    +--------------+---------------+------+--------------+---------+
+    | Field        | Type          | Null | Key          | Extra   |
+    +--------------+---------------+------+--------------+---------+
+    | COUNTRY_ID   | serial        | NO   | PRIMARY KEY  |         |
+    | COUNTRY_NAME | varchar(40)   | NO   |              |         |
+    | COUNTRY_CODE | varchar(2)    | NO   |              | UNIQUE  |
+    +--------------+---------------+------+--------------+---------+
     ```
+    
     
     ```
     CREATE TABLE countries (
