@@ -23,11 +23,11 @@
 1. Write a statement to change `email` to `'super top secret'` and `last_name` to `McSalesman` for employees who's `job_title` is `Sales Representative`.
 
 ```sql
-	UPDATE 
-    	employees 
-  	SET 
-    	email_address = 'super top secret',
-    	last_name = 'McSalesman'
+  UPDATE 
+    employees 
+  SET 
+    email_address = 'super top secret',
+		last_name = 'McSalesman'
 	WHERE 
 		job_title = 'Sales Representative';
 ```
@@ -36,9 +36,9 @@
 
 ```sql
 	UPDATE 
-    	employees 
-  	SET 
-    	web_page = 'https://en.wikipedia.org/wiki/Seattle'
+		employees 
+	SET 
+		web_page = 'https://en.wikipedia.org/wiki/Seattle'
 	WHERE 
 		city = 'Seattle';
 ```
@@ -62,15 +62,17 @@ You will have to check the `order_details_status` table to see which code from t
 
 
 ```sql
-  UPDATE orders
-          LEFT JOIN
-      orders_status ON orders.status_id = orders_status.id
+  UPDATE 
+		orders
+	LEFT JOIN
+		orders_status ON orders.status_id = orders_status.id
   SET 
-      orders.ship_name = 'Roland Andersen',
-      orders.ship_address = '123 8th Street',
-      orders.ship_city = 'Portland',
-      orders.ship_state_province = 'OR'
+		orders.ship_name = 'Roland Andersen',
+		orders.ship_address = '123 8th Street',
+		orders.ship_city = 'Portland',
+		orders.ship_state_province = 'OR'
   WHERE
-      customer_id = 10
-          AND orders_status.status_name != 'Shipped';
+			customer_id = 10 
+		AND 
+			orders_status.status_name != 'Shipped';
 ```
