@@ -5,4 +5,3 @@
 3. Delete any discontinued products from the `product` table.
 4. Pick a customer, delete them, any orders they have made, and any related data in the `order_details` table. Consider foreign key constraints again!
 5. Delete the entire `employee` table. You might want to check the [`TRUNCATE`](https://www.postgresql.org/docs/current/sql-truncate.html) command.
-6. Delete the entire database.
