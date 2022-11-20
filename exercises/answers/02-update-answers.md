@@ -27,20 +27,20 @@
     employees 
   SET 
     email_address = 'super top secret',
-		last_name = 'McSalesman'
-	WHERE 
-		job_title = 'Sales Representative';
+    last_name = 'McSalesman'
+  WHERE 
+    job_title = 'Sales Representative';
 ```
 
 3. Write a statement to change the `webpage` of all the employees in Seattle to the Wikipedia page for Seattle. 
 
 ```sql
-	UPDATE 
-		employees 
-	SET 
-		web_page = 'https://en.wikipedia.org/wiki/Seattle'
-	WHERE 
-		city = 'Seattle';
+  UPDATE 
+    employees 
+  SET 
+    web_page = 'https://en.wikipedia.org/wiki/Seattle'
+  WHERE 
+    city = 'Seattle';
 ```
 
 Now that we've wrecked the `employees` table, let's look at the `customers`:
@@ -50,9 +50,9 @@ Now that we've wrecked the `employees` table, let's look at the `customers`:
 ```sql
   UPDATE 
     customers
-	SET 
+  SET 
     last_name = 'Anderson'
-	WHERE 
+  WHERE 
     customers.id = '10'; 
 ```
 
@@ -63,16 +63,16 @@ You will have to check the `order_details_status` table to see which code from t
 
 ```sql
   UPDATE 
-		orders
-	LEFT JOIN
-		orders_status ON orders.status_id = orders_status.id
+    orders
+  LEFT JOIN
+    orders_status ON orders.status_id = orders_status.id
   SET 
-		orders.ship_name = 'Roland Andersen',
-		orders.ship_address = '123 8th Street',
-		orders.ship_city = 'Portland',
-		orders.ship_state_province = 'OR'
+    orders.ship_name = 'Roland Andersen',
+    orders.ship_address = '123 8th Street',
+    orders.ship_city = 'Portland',
+    orders.ship_state_province = 'OR'
   WHERE
-			customer_id = 10 
-		AND 
-			orders_status.status_name != 'Shipped';
+    customer_id = 10 
+  AND 
+  orders_status.status_name != 'Shipped';
 ```
