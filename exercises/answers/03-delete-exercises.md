@@ -42,7 +42,7 @@ Now that we've got to grips with creating, reading and updating data in our data
 	WHERE orders.ship_city = 'New York';
 ```
 
-4. Delete any discontinued products from the `product` table.
+3. Delete any discontinued products from the `product` table.
 
 ```sql
     ALTER TABLE inventory_transactions
@@ -77,7 +77,7 @@ Now that we've got to grips with creating, reading and updating data in our data
     WHERE discontinued = 1;
 ```
 
-6. Pick a customer, delete them, any orders they have made, and any related data in the `order_details` table. Consider foreign key constraints again!
+4. Pick a customer, delete them, any orders they have made, and any related data in the `order_details` table. Consider foreign key constraints again!
 
 ```sql
 	ALTER TABLE orders
@@ -92,7 +92,7 @@ Now that we've got to grips with creating, reading and updating data in our data
 	DELETE FROM customers WHERE customers.id = 1;
 ```
 
-7. Delete the entire `employee` table. You might want to check the [TRUNCATE](https://www.postgresql.org/docs/current/sql-truncate.html) command.
+5. Delete the entire `employee` table. You might want to check the [TRUNCATE](https://www.postgresql.org/docs/current/sql-truncate.html) command.
 ```sql
   TRUNCATE TABLE employees CASCADE;
 ```
