@@ -121,7 +121,7 @@ A pop-up window will appear, and we'll need to change thing in two tabs:
 	- Leave everything as default
 2. Under the `Connection` Tab:
 	- Hostname: `localhost`
-	- Port: leave it as `5433` (note this is the port we've set when we started the docker container)
+	- Port: change it to `5433` (note this is the port we've set when we started the docker container)
 	- Maintenance database: `northwind`
 	- Username: `postgres`
 	- Password: `supersecret`
